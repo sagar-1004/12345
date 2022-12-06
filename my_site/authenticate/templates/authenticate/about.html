@@ -1,0 +1,29 @@
+{% extends 'authenticate/base.html' %}
+
+{% block content %}
+
+
+<form action="../about/" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="prn">PRN</label>
+              <input type="text" name="prn" class="form-control" required>
+              <div id="uname_error">
+
+            </div>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" name="name" class="form-control" required>
+              <div id="uname_error">
+
+            </div>
+            
+            <div class="button"><input type="submit" value="Save the Project" style="background-color:#000080;" class="btn btn-secondary btn-block" onclick="return validation(form)">
+          </form>
+            
+   
+         
+
+
+
+{% endblock %}
